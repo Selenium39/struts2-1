@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!--　1.package标签: 类似于代码中的包,用于区分package
+             1.name：随便写但是不能相同,与功能没有关系
+             2.extends：值是固定的struts-default:让类具有Action功能
+             3.namespace:与action中的name的值构成访问路径
+          2.action标签:配置action访问路径
+          　　１.name:与namespace构成访问路径,action中的name不能相同
+              2.class:action路径
+              3.method:让action中的多个方法执行
+          3.result标签:根据action方法的返回值,配置到不同的路径去
+              1.name:和方法的返回值一致
+              2.type:如何到路径中去(请求转发或者重定向),默认为转发
+          4.修改struts默认常量
+            1.方式一:<constant></constant>
+            2.方式二:在src下创建struts.properties
+            3.在web.xml中配置
+          5.引入配置文件             
+      -->
+	<!-- <package name="hellodemo" extends="struts-default"
+		namespace="/">
+		name：访问名称
+		<action name="hello" class="com.wantao.action.HelloAction">
+			配置返回值到页面
+			<result name="ok">/WEB-INF/hello.jsp</result>
+		</action>
+	</package> -->
+	<!-- 引入配置文件 -->
+	<include file="struts-hello.xml"></include>
+	<include file="struts-form.xml"></include>
+</struts>
